@@ -17,15 +17,18 @@ $("#submit").click(function(e){
     let address = $("#address").val();
     let counter = count();
     let destroy = 1
-    $("#tbody").append(`<tr><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td>${destroy}</td></tr>`);
+    $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td>${destroy}</td></tr>`);
     
    
 
   });
-
+   
+//   Excerpt from w3school
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#tbody").filter(function() {
+    $("#tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
+  
