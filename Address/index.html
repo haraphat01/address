@@ -3,85 +3,89 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 
-<html>
+    <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Address Book</title>
-    <meta name="description" content="">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
+        <head>
+        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Address Book</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-10 col-md-10 col-sm-12 text-center title-div">
-                <h1 class="">Address Book</h1>
-                <p class="">These are the following name(s) you have on your address book</p>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-12 text-center title-div">
+                    <h1 class="">Address Book</h1>
+                    <p class="">These are the following name(s) you have on your address book</p>
+                </div>
+            </div>
+
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">First Name:</label>
+                        <input type="firstName" class="form-control" id="firstName" placeholder="Type your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Last Name:</label>
+                        <input type="lastName" class="form-control" id="lastName" placeholder="Type your last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Phone Number:</label>
+                        <input type="phone" class="form-control" id="phone" placeholder="Type your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">address:</label>
+                        <input type="address" class="form-control" id="address" placeholder="Type your address">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="submit">Save</button>
+                </form>
+            </div>
+
+
+            <h2>Search for a Record</h2>
+            <p>Type a record you're looking for:</p>
+            <input id="myInput" type="text" placeholder="Search..">
+            <br><br>
+            <div class="">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+
+                            <td id="first">Mark</td>
+                            <td id="last">Otto</td>
+                            <td id="phone">Otto</td>
+                            <td id="add">Otto</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div>
-            <form>
-                <div class="form-group">
-                    <label for="name">First Name:</label>
-                    <input type="firstName" class="form-control" id="firstName" placeholder="Type your first name">
-                </div>
-                <div class="form-group">
-                    <label for="name">Last Name:</label>
-                    <input type="lastName" class="form-control" id="lastName" placeholder="Type your last name">
-                </div>
 
-                <div class="form-group">
-                    <label for="name">Phone Number:</label>
-                    <input type="phone" class="form-control" id="phone" placeholder="Type your phone number">
-                </div>
-
-                <div class="form-group">
-                    <label for="name">address:</label>
-                    <input type="address" class="form-control" id="address" placeholder="Type your address">
-                </div>
-                <button type="submit" class="btn btn-default" id="submit">Save</button>
-            </form>
-        </div>
-
-        <div class="">
-            <table class="table">
-                <thead>
-                    <tr>
-                       
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                    <tr>
-                        
-                        <td id="first">Mark</td>
-                        <td id="last">Otto</td>
-                        <td id="phone">Otto</td>
-                        <td id="add">Otto</td>
-                        
-                    </tr>
-                   
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
-    <script src="project.js" async defer></script>
-</body>
+        <script src="project.js" async defer></script>
+    </body>
 
 </html>
