@@ -3,8 +3,8 @@ $("#submit").click(function(e){
 
     function count(){
         let c = 0;
-        let a = $("#table tr")
-        for(let i =0; a.length; i++){
+        let a = $("#tbody tr")
+        for (let i = 0; i < a.length; i++){
             c += 1
         }
 
@@ -17,7 +17,7 @@ $("#submit").click(function(e){
     let address = $("#address").val();
     let counter = count();
     let destroy = 1
-    $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td>${destroy}</td></tr>`);
+    $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td><button id="destroy" class="btn-primary">Destroy</button></td></tr>`);
     
    
 
@@ -31,4 +31,11 @@ $("#submit").click(function(e){
     });
   });
 
-  
+   
+       $("#destroy").click(function(){
+        $(this).closest('tr').remove();
+       })
+
+       $("#tbody").on('click', '#destroy', function () {
+        $(this).closest('tr').remove();
+    });
