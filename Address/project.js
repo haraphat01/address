@@ -17,7 +17,12 @@ $("#submit").click(function(e){
     let address = $("#address").val();
     let counter = count();
     let destroy = 1
-    $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td><button id="destroy" class="btn-primary">Destroy</button></td></tr>`);
+    if (firstName != "" && lastName != "" && phone1 != "" && address != "", counter === " ") {
+        $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td><button id="destroy" class="btn-primary">Destroy</button></td></tr>`);
+       
+    } else {
+       alert("You must fill in the fields before you can save a contact")
+    }
     
    
 
