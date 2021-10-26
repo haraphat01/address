@@ -17,7 +17,7 @@ $("#submit").click(function(e){
     let address = $("#address").val();
     let counter = count();
     let destroy = 1
-    if (firstName != "" && lastName != "" && phone1 != "" && address != "", counter === " ") {
+    if (firstName != "" && lastName != "" && phone1 != "" && address != "") {
         $("#tbody").append(`<tr id="tr"><td>${counter}</td><td>${firstName}</td><td>${lastName}</td><td>${phone1}</td><td>${address}</td><td><button id="destroy" class="btn-primary">Destroy</button></td></tr>`);
        
     } else {
